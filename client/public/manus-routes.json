@@ -1,0 +1,1 @@
+{"routes":[{"path":"/","title":"Mahkama — Home"},{"path":"/intake","title":"Start a case"},{"path":"/lawyers","title":"Find a lawyer"},{"path":"/case/:id","title":"Case details"},{"path":"/messages","title":"Messages"},{"path":"/profile","title":"Profile"}]}
