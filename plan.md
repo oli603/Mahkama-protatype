@@ -1,10 +1,10 @@
 # Mahkama client prototype plan
 
 ## Scope
-Build a browser-ready, client-facing prototype for an Ethiopia-first legal marketplace. The first release is an interaction-rich demo using local realistic data and client-side state, not a production legal service. The user should be able to move from the home dashboard into guided case intake, browse many Ethiopian case types, see suggested verified lawyers, compare proposals, select a lawyer, and preview the downstream secure-workflow states (chat, documents, appointment, Chapa payment and review).
+Build a browser-ready, two-sided prototype for an Ethiopia-first legal marketplace. The first release is an interaction-rich demo using local realistic data and client-side state, not a production legal service. Clients move from the home dashboard into guided case intake, browse many Ethiopian case types, see suggested verified lawyers, compare proposals, select a lawyer, and preview the downstream secure-workflow states (chat, documents, appointment, Chapa payment and review). Lawyers can switch into a dedicated professional workspace to review privacy-safe case leads, send proposal drafts, monitor verification, appointments, active clients, response rate and ETB earnings, then return to the client experience.
 
 ## Product choices
-- Keep the prototype centered on the client. Lawyer tools are represented through profile and proposal information rather than built as a second dashboard.
+- Keep the client experience as the default. Add a clearly marked lawyer workspace as a second role-aware dashboard so the marketplace loop is visible without pretending it is production-ready.
 - Treat matches as suggestions only. Use careful language such as “may fit” and “based on your answers”; never guarantee outcomes or provide legal advice.
 - Use local Ethiopia-specific content: Addis Ababa as the initial location, Amharic/English language cues, ETB pricing, and case categories that are common in Ethiopia.
 - Use local state for the demo so every key step is clickable without requiring a real account, payment or document upload. The production architecture can later connect these surfaces to the managed Server, Database, Authentication and Storage capabilities already enabled.
@@ -24,10 +24,10 @@ Build a browser-ready, client-facing prototype for an Ethiopia-first legal marke
 - **Signature brand color:** forest green `#173F35`.
 
 ## Project structure
-- `client/src/pages/Home.tsx` — all demo screens and local interaction state for the client journey.
+- `client/src/pages/Home.tsx` — all demo screens, local interaction state, client journey and lawyer workspace.
 - `client/src/App.tsx` — route shell and global providers.
 - `client/src/index.css` — palette, type, responsive layout and custom component styling.
-- `client/public/manus-routes.json` — declared page route manifest for the preview host.
+- `client/public/manus-routes.json` — declared page route manifest for the preview host, including `/lawyer`.
 - `plan.md` / `TODO.md` — decisions and deliverable acceptance criteria.
 - `drizzle/` and `server/` — preserved managed infrastructure starter; future persistence and auth can be wired here without changing the client interaction model.
 
